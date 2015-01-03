@@ -9,7 +9,7 @@ Bienvenue sur la documentation de Sonerezh !
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    introduction
    requirements
