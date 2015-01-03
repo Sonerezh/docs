@@ -25,5 +25,4 @@ After installing the documentation, you can build the documentation using sphinx
 
 	git clone https://github.com/Sonerezh/docs.git
 	cd docs
-	# Create the french documentation
-	make html-fr
+	make html
