@@ -15,6 +15,7 @@ Contents:
    requirements
    installation
    configuration
+   annexes
 
 Indices and tables
 ==================

@@ -3,9 +3,12 @@ Pré-requis
 
 Serveur web
 -----------
-Sonerezh fonctionne uniquement grâce à votre navigateur (pour le moment). Elle a donc besoin d'un serveur web pour fonctionner (Apache, Nginx, etc).
+Sonerezh est une application web accessible avec votre navigateur. Elle a donc besoin d'un serveur web pour fonctionner (Apache, Nginx, etc). Bien que nous fournissons des modèles de configuration pour Apache et Nginx, nous ne détaillerons pas comment installer un serveur web.
+
+Sonerezh a aussi besoin d'une base de données pour stocker un certain nombre d'informations. Nous vous recommandons d'utiliser la dernière version stable de MariaDB, mais MySQL doit aussi fonctionner.
 
 PHP
 ---
-* Vous devez utiliser PHP 5.3.0 ou ultérieur.
-* Le support du redimensionnement automatique des pochettes d'albums nécessite le module PHP GD2.
+* PHP 5.4 ou supérieur
+* Module PHP GD
+* libav-tools (facultatif), si vous souhaitez profiter de la conversion des pistes  
