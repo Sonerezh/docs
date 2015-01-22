@@ -1,7 +1,10 @@
+============
 Introduction
 ============
+
 Sonerezh est un projet libre et open-source vous permettant de classer votre musique et d'y accéder partout via votre navigateur web. Nous espérons maintenir une documentation de qualité afin de répondre à toutes vos questions.
 
+---------------
 Fonctionnalités
 ---------------
 Actuellement, Sonerezh propose les fonctionnalités suivantes :

@@ -1,5 +1,8 @@
+=======
 Annexes
 =======
+
+---------------------------------
 Modèle de server-block pour Nginx
 ---------------------------------
 
@@ -30,6 +33,7 @@ Voici un modèle fonctionnel de server-block a ajouter dans votre configuration 
 
 De nombreux tutoriels sur Internet vous aideront à configurer Nginx avec PHP si ce n'est pas déjà fait.
 
+----------------------------------
 Modèle de virtualhost pour Apache2
 ----------------------------------
 

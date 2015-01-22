@@ -1,8 +1,10 @@
+============
 Installation
 ============
 
 Sonerezh ne requiert pas de manipulations particulières et s'installe comme toute application PHP classique.
 
+-------------------------------------
 Installation sur un hébergement dédié
 -------------------------------------
 
@@ -29,13 +31,15 @@ Installation sans Git :
     sudo unzip master.zip
     sudo chown -R www-data: sonerezh-master/ && sudo chmod -R 775 sonerezh-master/
 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Préparation du serveur web
-++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Des modèles de configuration pour Nginx et Apache sont disponibles en :doc:`annexes`.
 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Déploiement de l'application
-++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 C'est prêt ! Vous n'avez plus qu'à vous rendre sur http://demo.sonerezh.bzh/install et à remplir les informations demandées (à adapter à votre configuration).
 
@@ -50,6 +54,7 @@ C'est prêt ! Vous n'avez plus qu'à vous rendre sur http://demo.sonerezh.bzh/in
 
 Validez, et c'est bon ! :)
 
+-----------------------------------------
 Installation sur un hébergement mutualisé
 -----------------------------------------
 

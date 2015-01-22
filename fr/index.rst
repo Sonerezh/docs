@@ -3,6 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+============================================
 Bienvenue sur la documentation de Sonerezh !
 ============================================
 
@@ -17,6 +18,7 @@ Contents:
    configuration
    annexes
 
+==================
 Indices and tables
 ==================
 
