@@ -17,6 +17,7 @@ Contents:
    installation
    configuration
    annexes
+   roadmap
 
 ==================
 Indices and tables
