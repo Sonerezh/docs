@@ -15,7 +15,7 @@ Voici un modèle fonctionnel de server-block a ajouter dans votre configuration 
     server {
         listen      80;
         server_name demo.sonerezh.bzh;
-        root        /var/www/sonerezh;
+        root        /var/www/sonerezh/app/webroot;
 
         index index.php;
 
