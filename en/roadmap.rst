@@ -30,4 +30,3 @@ Voici une liste non-exhaustive des fonctionnalités prévues dans les futures ve
 * Gestionnaire de mises à jour
 * Alphabet de navigation sur la vue Artists
 * Ajout d'un en-ête optionnel "Ajouté Récemment" sur les vues Artists et Albums
-* Import / Export des playlists au format M3U

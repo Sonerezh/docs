@@ -23,11 +23,6 @@ Voici un modèle fonctionnel de server-block a ajouter dans votre configuration 
             try_files $uri $uri/ /index.php?$args;
         }
 
-        # Serve static images from resized folder
-        location ~* \/([^\/]+_[0-9]+x[0-9]+\.[a-z]+) {
-            try_files /img/resized/$1 /index.php?$args;
-        }
-
         location ~ \.php$ {
             try_files $uri =404;
             fastcgi_index index.php;
