@@ -1,4 +1,4 @@
-Sonerez Documentation
+Sonerezh Documentation
 =====================
 This is the official documentation for the Sonerezh project. It is available online, PDF and EPUB formats at LINK.
 
