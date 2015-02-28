@@ -21,6 +21,8 @@ This is a minimalist configuration sample for Nginx. Feel free to improve it to 
 
         location / {
             try_files $uri $uri/ /index.php?$args;
+            expires 14d;
+            add_header Cache-Control 'public';
         }
 
         location ~ \.php$ {
