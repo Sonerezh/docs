@@ -7,6 +7,8 @@
 Bienvenue sur la documentation de Sonerezh !
 ============================================
 
+.. note:: English translation available here: https://www.sonerezh.bzh/docs/en/
+
 Contents:
 
 .. toctree::
@@ -26,4 +28,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

@@ -2,13 +2,13 @@
 Annexes
 =======
 
----------------------------------
-Modèle de server-block pour Nginx
----------------------------------
+--------------------------
+Nginx server-block example
+--------------------------
 
-Voici un modèle fonctionnel de server-block a ajouter dans votre configuration Nginx. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
+This is a minimalist configuration sample for Nginx. Feel free to improve it to fit your needs.
 
-.. note:: Le modèle ci-dessous a été testé avec Nginx 1.6.2, sous Debian 7.8. Il permet d'avoir une instance de Sonerezh accessible à l'adresse http://demo.sonerezh.bzh.
+.. note:: This example has been tested with Nginx 1.6.2, under Debian 7.8.
 
 .. code-block:: nginx
 
@@ -31,15 +31,15 @@ Voici un modèle fonctionnel de server-block a ajouter dans votre configuration 
         }
     }
 
-De nombreux tutoriels sur Internet vous aideront à configurer Nginx avec PHP si ce n'est pas déjà fait.
+Many tutorials on the web can help you to configure Nginx and PHP-FPM.
 
-----------------------------------
-Modèle de virtualhost pour Apache2
-----------------------------------
+----------------------------
+Apache2 virtual host example
+----------------------------
 
-Voici un modèle fonctione de virtual host a ajouter dans votre configuration Apache. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
+This is a minimalist configuration sample for Apache 2. Feel free to improve it to fit your needs.
 
-.. note:: Le modèle si-dessous a été testé avec Apache 2.2.22, sous Debian 7.8. Il permet d'avoir une instance de Sonerezh accessible à l'adresse http://demo.sonerezh.bzh.
+.. note:: This example has been tested with Apache 2.2.22, under Debian 7.8.
 
 .. code-block:: apache
 

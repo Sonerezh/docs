@@ -7,6 +7,8 @@
 Welcome on Sonerezh official documentation!
 ============================================
 
+.. note:: Une version française est disponible par ici : https://www.sonerezh.bzh/docs/fr/.
+
 Contents:
 
 .. toctree::
