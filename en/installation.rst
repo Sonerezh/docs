@@ -20,7 +20,7 @@ Install Sonerezh with Git:
 
     cd /var/www
     sudo git clone https://github.com/Sonerezh/sonerezh.git
-    sudo chown -R wwww-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 Install Sonerezh with the zip archive:
 
