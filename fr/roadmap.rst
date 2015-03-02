@@ -27,7 +27,7 @@ Voici une liste non-exhaustive des fonctionnalités prévues dans les futures ve
 * Gestionnaire de liens de partage
 * Drag'ndrop sur la gestion de la file d'attente et des playlists
 * Système de filtres sur les vues
-* Gestionnaire de mises à jour
+* Gestionnaire de mise à jour
 * Alphabet de navigation sur la vue Artists
-* Ajout d'un en-ête optionnel "Ajouté Récemment" sur les vues Artists et Albums
+* Ajout d'un entête optionnel "Ajouté Récemment" sur les vues Artists et Albums
 * Import / Export des playlists au format M3U

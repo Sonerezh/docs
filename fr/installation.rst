@@ -2,7 +2,7 @@
 Installation
 ============
 
-Sonerezh ne requiert pas de manipulations particulières et s'installe comme toute application PHP classique.
+Sonerezh ne requiert pas de manipulation particulière et s'installe comme toute application PHP classique.
 
 -------------------------------------
 Installation sur un hébergement dédié

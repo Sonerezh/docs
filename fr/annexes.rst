@@ -6,7 +6,7 @@ Annexes
 Modèle de server-block pour Nginx
 ---------------------------------
 
-Voici un modèle fonctionnel de server-block a ajouter dans votre configuration Nginx. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
+Voici un modèle fonctionnel de server-block à ajouter dans votre configuration Nginx. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
 
 .. note:: Le modèle ci-dessous a été testé avec Nginx 1.6.2, sous Debian 7.8. Il permet d'avoir une instance de Sonerezh accessible à l'adresse http://demo.sonerezh.bzh.
 
@@ -44,7 +44,7 @@ De nombreux tutoriels sur Internet vous aideront à configurer Nginx avec PHP si
 Modèle de virtualhost pour Apache2
 ----------------------------------
 
-Voici un modèle fonctione de virtual host a ajouter dans votre configuration Apache. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
+Voici un modèle fonctione de virtual host à ajouter dans votre configuration Apache. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
 
 .. note:: Le modèle si-dessous a été testé avec Apache 2.2.22, sous Debian 7.8. Il permet d'avoir une instance de Sonerezh accessible à l'adresse http://demo.sonerezh.bzh.
 
