@@ -10,7 +10,7 @@ Installation on a dedicated server
 
 As Sonerezh does not have auto-updater yet, we recommend you to use Git to download the sources, it will facilitate the update process.
 
-.. note:: We are installing Sonerezh in ``/var/www/sonerezh``, an deploying it to http://demo.sonerezh.bzh.
+.. note:: We are installing Sonerezh in ``/var/www/sonerezh``, and deploying it to http://demo.sonerezh.bzh.
 
 But if you prefer, you can also download a ZIP archive on GitHub.
 
