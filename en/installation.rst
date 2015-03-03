@@ -56,4 +56,76 @@ The installation process on shared hosting is almost the same than on dedicated 
 5) Fill in the form
 6) Enjoy your music :)
 
-.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/master.zip
+
+------------------------------------------
+Installation example on Ubuntu Server
+------------------------------------------
+This is an example to install Sonerezh on Ubuntu Server 14.10 (Apache 2.4, PHP 5.5 and MySQL 14.14). In this example, 
+the default installation path is ``/var/www/html/sonerezh`` and it is deployed on https://www.myserver.com/sonerezh.
+
+^^^^^^^^^^^^^^^^^
+Download Sonerezh
+^^^^^^^^^^^^^^^^^
+As mentioned above, it is recommended to use Git to download the sources (install it with ``sudo apt-get install git``):
+
+.. code-block:: sh
+
+    cd /var/www/html/
+    sudo git clone https://github.com/Sonerezh/sonerezh.git
+    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+
+^^^^^^^^^^^^^^^^^^^
+Create the database
+^^^^^^^^^^^^^^^^^^^
+1) Connect to the MySQL prompt:
+
+.. code-block:: sh
+
+    mysql -u root -p
+
+2) Create the database, a database user and grant privileges:
+
+.. code-block:: sql
+
+    CREATE DATABASE sonerezh;
+    GRANT ALL PRIVILEGES ON sonerezh.* TO 'sonerezh'@'localhost' IDENTIFIED BY 'yourpassword';
+    FLUSH PRIVILEGES;
+    exit;
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure your web server
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Edit your config file:
+
+.. code-block:: sh
+
+    sudo nano /etc/apache2/sites-available/default-ssl.conf
+
+.. note:: We are here in the case of a secured https server. For http, use ``sudo nano /etc/apache2/sites-available/000-default.conf``.
+
+Then add your site, below existing ones, just before ``</VirtualHost>``:
+
+.. code-block:: sh
+
+    ServerName      didero.no-ip.biz/sonerezh/
+    DocumentRoot    /var/www/html/sonerezh
+    <Directory /var/www/html/sonerezh>
+        Options -Indexes
+		AllowOverride All
+		<IfModule mod_authz_core.c>
+			Require all granted
+		</IfModule>
+    </Directory>
+    CustomLog   /var/log/apache2/demo.sonerezh.bzh-access.log "Combined"
+    ErrorLog    /var/log/apache2/demo.sonerezh.bzh-error.log
+
+Save the file and restart your web server:
+
+.. code-block:: sh
+
+    sudo a2enmod rewrite && sudo service apache2 restart
+    
+^^^^^^^^^^^^^^^^^^
+Configure Sonerezh
+^^^^^^^^^^^^^^^^^^
+In your browser, go to https://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
