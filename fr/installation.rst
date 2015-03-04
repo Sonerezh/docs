@@ -79,3 +79,50 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 5) Validez. C'est bon ! :)
 
 .. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/master.zip
+
+----------------------------------------
+Exemple de déploiement sur Ubuntu Server
+----------------------------------------
+Voici un exemple d'installation réalisée sur Ubuntu Server 14.10 (Apache 2.4, PHP 5.5 et MySQL 14.14). Dans cet exemple, le dossier dans lequel nous déployons Sonerezh est ``/var/www/html/sonerezh`` et l'URL d'accès : http://www.monserveur.com/sonerezh.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Télécharger les sources du projet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Comme indiqué ci-dessus, nous utilisons Git pour récupérer les sources du projet, cela facilitera le processus de mise à jour dans le futur (si la commande Git n'est pas disponible : ``sudo apt-get install git``).
+
+.. code-block:: sh
+
+    cd /var/www/html
+    sudo git clone https://github.com/Sonerezh/sonerezh.git
+    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Préparation de la base de données
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1) Se connecter à la console MySQL :
+
+.. code-block:: sh
+
+    mysql -u root -p
+
+2) Créer la base de données, y associer un utilisateur et lui affecter des droits :
+
+.. code-block:: sql
+
+    CREATE DATABASE sonerezh;
+    GRANT ALL PRIVILEGES ON sonerezh.* TO 'sonerezh'@'localhost' IDENTIFIED BY 'votre-motdepasse';
+    FLUSH PRIVILEGES;
+    exit;
+
+.. note:: Cette étape peut aussi être réalisée via PHPMyAdmin si vous l'utilisez déjà.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Configurer le serveur web
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-> Vérifier mod_rewrite
+
+^^^^^^^^^^^^^^^^^^
+Installer Sonerezh
+^^^^^^^^^^^^^^^^^^
+Nous y sommes presque, il ne reste plus qu'à accéder à http://www.monserveur.com/sonerezh et de remplir les champs avec les informations ci-dessus. Et c'est parti !
