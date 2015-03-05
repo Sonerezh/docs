@@ -54,7 +54,7 @@ copyright = u'2015, Guillaume Leduc, Thomas Baccelli'
 # built documents.
 #
 # The short X.Y version.
-version = 'v0.9.0-beta'
+version = 'v1.0.0-beta'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -130,7 +130,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
