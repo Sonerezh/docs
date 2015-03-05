@@ -119,8 +119,43 @@ Préparation de la base de données
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Configurer le serveur web
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+S'assurer que le module Apache ``mod_rewrite`` est activé :
 
--> Vérifier mod_rewrite
+.. code-block:: sh
+
+    sudo a2enmod rewrite
+
+Préparer le fichier de configuration :
+
+.. code-block:: sh
+
+    sudo vim /etc/apache2/sites-available/sonerezh.conf
+
+Et y ajouter le Virtual Host suivant :
+
+.. code-block:: apache
+
+   <VirtualHost *:80>
+        ServerName      www.myserver.com
+        DocumentRoot    /var/www/html/sonerezh
+    
+        <Directory /var/www/html/sonerezh>
+            Options -Indexes
+            AllowOverride All
+            <IfModule mod_authz_core.c>
+                Require all granted
+            </IfModule>
+        </Directory>
+        
+        CustomLog   /var/log/apache2/www.myserver.com-access.log "Combined"
+        ErrorLog    /var/log/apache2/www.myserver.com-error.log
+    </VirtualHost>
+
+Enregistrer le fichier, activer le nouveau site et redémarrer Apache :
+
+.. code-block:: sh
+
+    sudo a2ensite sonerezh && sudo service apache2 restart 
 
 ^^^^^^^^^^^^^^^^^^
 Installer Sonerezh
