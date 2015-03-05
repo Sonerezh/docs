@@ -8,6 +8,8 @@ Web server
 
 Sonerezh is a web-based application which works with your browser. You need a web server to deploy it (Apache, Nginx...). You can find configuration samples for Apache and Nginx in the appendices, but we will not cover the web server installation.
 
+.. note:: You need to enable the ``mod_rewrite`` module if you want to run Sonerezh with Apache. To enable it on Debian an derivative: ``sudo a2enmod rewrite && sudo service apache2 restart``.
+
 ---------------
 Database
 ---------------

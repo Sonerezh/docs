@@ -8,6 +8,8 @@ Serveur web
 
 Sonerezh est une application web accessible avec votre navigateur. Elle a donc besoin d'un serveur web pour fonctionner (Apache, Nginx, etc). Bien que nous fournissons des modèles de configuration pour Apache et Nginx, nous ne détaillerons pas comment installer un serveur web.
 
+.. note:: Apache a besoin du module ``mod_rewrite`` pour interpréter les URLs de Sonerezh correctement. Pour l'activer sur Debian et dérivés : ``sudo a2enmod rewite && sudo service apache2 restart``.
+
 ---------------
 Base de données
 ---------------
