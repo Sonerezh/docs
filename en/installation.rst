@@ -19,7 +19,7 @@ Install Sonerezh with Git:
 .. code-block:: sh
 
     cd /var/www
-    sudo git clone https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master  https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 Install Sonerezh with the zip archive:
@@ -71,7 +71,7 @@ As mentioned above, it is recommended to use Git to download the sources (instal
 .. code-block:: sh
 
     cd /var/www/html/
-    sudo git clone http://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master http://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^

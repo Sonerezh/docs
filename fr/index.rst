@@ -17,6 +17,7 @@ Contents:
    introduction
    requirements
    installation
+   configuration
    annexes
    roadmap
 

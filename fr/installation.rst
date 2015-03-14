@@ -19,7 +19,7 @@ Installation avec Git :
 .. code-block:: sh
 
     cd /var/www
-    sudo git clone https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 Installation sans Git :
@@ -93,7 +93,7 @@ Comme indiqué ci-dessus, nous utilisons Git pour récupérer les sources du pro
 .. code-block:: sh
 
     cd /var/www/html
-    sudo git clone https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
