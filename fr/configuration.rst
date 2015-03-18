@@ -1,7 +1,7 @@
 =============
 Configuration
 =============
-La configuration de Sonerezh s'effecture globalement sur la page /settings de votre instance. Cette page vous permet aussi d'obtenir un certain nombre de statistiques sur la taille de votre librairie, ou encore l'espace occupé par les différents caches.
+La configuration de Sonerezh s'effecture globalement sur la page ``/settings`` de votre instance. Cette page vous permet aussi d'obtenir un certain nombre de statistiques sur la taille de votre librairie, ou encore l'espace occupé par les différents caches.
 
 Cette page détaille l'ensemble des paramètres disponibles.
 
