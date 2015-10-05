@@ -19,7 +19,7 @@ Install Sonerezh with Git:
 .. code-block:: sh
 
     cd /var/www
-    sudo git clone --branch master  https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch 1.0.0-beta https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 Install Sonerezh with the zip archive:
@@ -27,7 +27,7 @@ Install Sonerezh with the zip archive:
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/master.zip
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
     sudo unzip master.zip
     sudo chown -R www-data: sonerezh-master/ && sudo chmod -R 775 sonerezh-master/
 
@@ -71,7 +71,7 @@ As mentioned above, it is recommended to use Git to download the sources (instal
 .. code-block:: sh
 
     cd /var/www/html/
-    sudo git clone --branch master http://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch 1.0.0-beta http://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^
@@ -136,4 +136,4 @@ Save the file, enable the new virtual host and restart your web server:
 ^^^^^^^^^^^^^^^^^^
 Configure Sonerezh
 ^^^^^^^^^^^^^^^^^^
-In your browser, go to https://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
+In your browser, go to http://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
