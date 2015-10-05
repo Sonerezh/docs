@@ -19,7 +19,8 @@ Contents:
    installation
    configuration
    annexes
-   roadmap
+
+The project's roadmap is available here: `roadmap.sonerezh.bzh <http://roadmap.sonerezh.bzh/b/eCuz4jyhwjmxpxX8C/sonerezh-roadmap>`_
 
 ==================
 Indices and tables
