@@ -22,10 +22,3 @@ Contents:
 
 La roadmap du projet est disponible à cette adresse : `roadmap.sonerezh.bzh <http://roadmap.sonerezh.bzh/b/eCuz4jyhwjmxpxX8C/sonerezh-roadmap>`_
 
-==================
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
