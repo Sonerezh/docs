@@ -56,6 +56,6 @@ You need to install libav-tools if you want Sonerezh to convert your tracks to a
 
 On Debian :
 
-.. code-block:: text
+.. code-block:: sh
 
     sudo apt-get install libav-tools
