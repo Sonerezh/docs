@@ -40,6 +40,14 @@ Sonerezh is cooked with CakePHP, and you need PHP to be installed.
 * PHP >= 5.4
 * PHP-GD PHP module
 
+Ensure the required PHP extensions are enabled in your php.ini:
+
+.. code-block:: text
+    
+    extension=exif.so
+    extension=gd.so
+    extension=pdo_mysql.so
+
 -----------------
 Libav (optional)
 -----------------
@@ -48,6 +56,6 @@ You need to install libav-tools if you want Sonerezh to convert your tracks to a
 
 On Debian :
 
-.. code-block:: sh
+.. code-block:: text
 
     sudo apt-get install libav-tools
