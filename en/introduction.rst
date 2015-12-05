@@ -13,4 +13,5 @@ Features
  * User access management with two access levels
  * Playlist management
  * Automatic conversion to MP3
+ * Work on MySQL and PostgreSQL
  * And more to come

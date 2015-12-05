@@ -10,26 +10,25 @@ Installation on a dedicated server
 
 As Sonerezh does not have auto-updater yet, we recommend you to use Git to download the sources, it will facilitate the update process.
 
-.. note:: We are installing Sonerezh in ``/var/www/sonerezh``, and deploying it to http://demo.sonerezh.bzh.
-
-But if you prefer, you can also download a ZIP archive on GitHub.
+.. note:: We will install Sonerezh in ``/var/www/sonerezh``, and make it reachable to http://demo.sonerezh.bzh.
 
 Install Sonerezh with Git:
 
 .. code-block:: sh
 
     cd /var/www
-    sudo git clone --branch 1.0.0-beta https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
-Install Sonerezh with the zip archive:
+But if you prefer, you can also download a ZIP archive from GitHub.
 
 .. code-block:: sh
 
     cd /var/www
     sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
-    sudo unzip master.zip
-    sudo chown -R www-data: sonerezh-master/ && sudo chmod -R 775 sonerezh-master/
+    sudo unzip 1.0.0-beta.zip
+    sudo mv sonerezh-1.0.0-beta sonerezh
+    sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Preparing the web server
@@ -50,8 +49,8 @@ Installation on shared hosting
 The installation process on shared hosting is almost the same than on dedicated server. 
 
 1) Prepare your database, depending on your hosting provider
-2) Download Sonerezh on `GitHub`
-3) Upload and decompress the archive on your FTP, for example in ``sonerezh/``
+2) Download Sonerezh from GitHub_
+3) Upload and decompress the archive on your distant hosting, for example in ``sonerezh/``
 4) Go to the installation page (for example http://demo.sonerezh.bzh/install)
 5) Fill in the form
 6) Enjoy your music :)
@@ -71,7 +70,7 @@ As mentioned above, it is recommended to use Git to download the sources (instal
 .. code-block:: sh
 
     cd /var/www/html/
-    sudo git clone --branch 1.0.0-beta http://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master http://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^
@@ -137,3 +136,5 @@ Save the file, enable the new virtual host and restart your web server:
 Configure Sonerezh
 ^^^^^^^^^^^^^^^^^^
 In your browser, go to http://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
+
+.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip

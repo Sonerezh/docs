@@ -18,7 +18,8 @@ Contents:
    requirements
    installation
    configuration
+   upgrade
    annexes
 
-The project's roadmap is available here: `roadmap.sonerezh.bzh <http://roadmap.sonerezh.bzh/b/eCuz4jyhwjmxpxX8C/sonerezh-roadmap>`_
+The project's roadmap is available here: `roadmap.sonerezh.bzh <https://roadmap.sonerezh.bzh/b/eCuz4jyhwjmxpxX8C/sonerezh-roadmap>`_
 

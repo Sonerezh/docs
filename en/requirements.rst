@@ -8,15 +8,16 @@ Web server
 
 Sonerezh is a web-based application which works with your browser. You need a web server to deploy it (Apache, Nginx...). You can find configuration samples for Apache and Nginx in the appendices, but we will not cover the web server installation.
 
-.. note:: You need to enable the ``mod_rewrite`` module if you want to run Sonerezh with Apache. To enable it on Debian an derivative: ``sudo a2enmod rewrite && sudo service apache2 restart``.
+.. note:: You need to enable the ``mod_rewrite`` module if you want to run Sonerezh with Apache. For example on Debian: ``sudo a2enmod rewrite && sudo service apache2 restart``.
 
 ---------------
 Database
 ---------------
 
-Sonerezh requires a MySQL or MariaDB database to sort your music. The database must be created and ready before the deployment.
+Sonerezh requires a database to store its datas. We recommend MariaDB but it should work on MySQL and PostgreSQL.
+The database must be created and ready before the deployment.
 
-1) Connect to the MySQL prompt:
+1) Connect to the MariaDB/MySQL prompt:
 
 .. code-block:: sh
 
@@ -42,7 +43,7 @@ Sonerezh is cooked with CakePHP, and you need PHP to be installed.
 
 Ensure the required PHP extensions are enabled in your php.ini:
 
-.. code-block:: text
+.. code-block:: ini
     
     extension=exif.so
     extension=gd.so

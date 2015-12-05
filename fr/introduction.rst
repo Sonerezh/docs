@@ -15,4 +15,5 @@ Actuellement, Sonerezh propose les fonctionnalités suivantes :
  * Gestion des utilisateurs selon deux niveaux d'accès
  * Conversion des pistes au format MP3
  * Gestionnaire de listes de lectures
+ * Compatible MySQL et PostgreSQL
  * Et plus encore à venir !

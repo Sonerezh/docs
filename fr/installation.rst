@@ -12,24 +12,23 @@ Nous vous recommandons d'utiliser ``git`` pour récupérer les sources du projet
 
 .. note:: Nous allons installer sonerezh dans ``/var/www/sonerezh``, pour pouvoir y accéder à l'adresse http://demo.sonerezh.bzh.
 
-Vous pouvez utiliser Git ou bien récupérer une archive au format ZIP sur le dépôt GitHub de Sonerezh.
-
 Installation avec Git :
 
 .. code-block:: sh
 
     cd /var/www
-    sudo git clone --branch 1.0.0-beta https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
-Installation sans Git :
+    Si vous préférez télécharger une archive Zip depuis GitHub:
 
 .. code-block:: sh
 
     cd /var/www
     sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
-    sudo unzip master.zip
-    sudo chown -R www-data: sonerezh-master/ && sudo chmod -R 775 sonerezh-master/
+    sudo unzip 1.0.0-beta.zip
+    sudo mv sonerezh-1.0.0-beta sonerezh
+    sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Préparation du serveur web
@@ -70,7 +69,7 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 * Email : l'adresse email utilisée pour vous connecter, ce premier compte sera créé avec le niveau d'accès administrateur
 * Mot de passe : mot de passe de l'administrateur
 * Dossier musique : le dossier dans lequel se trouve votre musique
-* Hôte : le nom d'hôte de la base de données pour Sonerezh
+* Hôte : le nom d'hôte de la base de données pour Sonerezh (ajoutez :1234 si vous utilisez un port non standard)
 * Base de données : le nom de la base de données
 * Identifiant : l'identifiant de l'utilisateur MySQL ou MariaDB
 * Mot de passe : le mot de passe de l'utilisateur MySQL ou MariaDB
@@ -93,7 +92,7 @@ Comme indiqué ci-dessus, nous utilisons Git pour récupérer les sources du pro
 .. code-block:: sh
 
     cd /var/www/html
-    sudo git clone --branch 1.0.0-beta https://github.com/Sonerezh/sonerezh.git
+    sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
     sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -136,7 +135,7 @@ Et y ajouter le Virtual Host suivant :
 .. code-block:: apache
 
    <VirtualHost *:80>
-        ServerName      www.myserver.com
+        ServerName      www.monserveur.com
         DocumentRoot    /var/www/html/sonerezh
     
         <Directory /var/www/html/sonerezh>
@@ -147,8 +146,8 @@ Et y ajouter le Virtual Host suivant :
             </IfModule>
         </Directory>
         
-        CustomLog   /var/log/apache2/www.myserver.com-access.log "Combined"
-        ErrorLog    /var/log/apache2/www.myserver.com-error.log
+        CustomLog   /var/log/apache2/www.monserveur.com-access.log "Combined"
+        ErrorLog    /var/log/apache2/www.monserveur.com-error.log
     </VirtualHost>
 
 Enregistrer le fichier, activer le nouveau site et redémarrer Apache :

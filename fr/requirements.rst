@@ -14,9 +14,10 @@ Sonerezh est une application web accessible avec votre navigateur. Elle a donc b
 Base de données
 ---------------
 
-Sonerezh s'appuie sur une base de données MySQL ou MariaDB pour fonctionner. La base de données doit être créée avant de lancer l'installation.
+Sonerezh s'appuie sur une base de données pour stocker ses données. Celle-ci peut être gérée par MariaDB, MySQL ou PostgreSQL mais nous recommandons MariaDB/MySQL.
+Elle doit être créée avant de lancer l'installation.
 
-1) Connectez-vous à votre gestionnaire de base de données :
+1) Connectez-vous au gestionnaire de base de données :
 
 .. code-block:: sh
 
@@ -40,9 +41,9 @@ Sonerezh fonctionne avec le framework PHP CakePHP, PHP est donc indispensable.
 * PHP 5.4 ou supérieur
 * Le module PHP GD
 
-Veuillez vérifier que les extensions PHP requises sont bien activées dans votre php.ini:
+Vérifiez que les extensions PHP requises sont bien activées dans votre php.ini:
 
-.. code-block:: text
+.. code-block:: ini
     
     extension=exif.so
     extension=gd.so
