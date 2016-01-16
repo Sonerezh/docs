@@ -66,9 +66,9 @@ Installation avec Git :
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
-    sudo unzip 1.0.0-beta.zip
-    sudo mv sonerezh-1.0.0-beta sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
+    sudo unzip 1.0.0.zip
+    sudo mv sonerezh-1.0.0 sonerezh
     sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,7 +118,7 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 
 5) Validez. C'est bon ! :)
 
-.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
+.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
 
 ----------------------------------------
 Exemple de déploiement sur Ubuntu Server

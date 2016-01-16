@@ -66,9 +66,9 @@ But if you prefer, you can also download a ZIP archive from GitHub.
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
-    sudo unzip 1.0.0-beta.zip
-    sudo mv sonerezh-1.0.0-beta sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
+    sudo unzip 1.0.0.zip
+    sudo mv sonerezh-1.0.0 sonerezh
     sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -178,4 +178,4 @@ Configure Sonerezh
 ^^^^^^^^^^^^^^^^^^
 In your browser, go to http://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
 
-.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0-beta.zip
+.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip

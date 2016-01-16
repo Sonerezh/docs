@@ -11,10 +11,10 @@ Mise à jour depuis 0.9.0
 .. warning:: Malheureusement il n'est pas possible de mettre à jour Sonerezh depuis la version 0.9.0 vers un version supérieure. Ceci est dû aux nombreux changements importants réalisés entre la version 0.9.0 et la version 1.0.0-beta. Il faut repartir de zéro afin d'avoir une installation propre.
 
 ----------------------------------------------------------------
-Mise à jour depuis l'ancienne branche 1.0.0-beta vers 1.0.0-beta
+Mise à jour depuis l'ancienne branche 1.0.0-beta vers 1.0.0
 ----------------------------------------------------------------
 
-.. note:: Cette section est valable si vous mettez à jour depuis l'ancienne branche 1.0.0-beta (c'est-à-dire avant le 01/12/2015)
+.. note:: Cette section est valable si vous mettez à jour depuis l'ancienne branche 1.0.0-beta
 
 ^^^^^^^^
 Avec git
@@ -25,7 +25,7 @@ Récupérez la dernière version des sources :
 
     cd /var/www/sonerezh
     git fetch
-    git checkout tags/1.0.0-beta
+    git checkout tags/1.0.0
 
 Le schéma de la base de données à changé, il faut donc le mettre à jour (requiert php-cli) :
 
