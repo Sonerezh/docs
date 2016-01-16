@@ -4,6 +4,47 @@ Installation
 
 Sonerezh ne requiert pas de manipulation particulière et s'installe comme toute application PHP classique.
 
+------------------------
+Installation avec Docker
+------------------------
+
+Sonerezh est prévue pour fonctionner sur Docker. C'est d'ailleurs la méthode d'installation la plus sûre et la plus rapide.
+
+^^^^^^^^^^^^^^^
+Base de données
+^^^^^^^^^^^^^^^
+
+L'image Docker officielle de Sonerezh n'embarque pas de base de données, c'est pourquoi il vous faut un container MariaDB :
+
+.. code-block:: sh
+
+    $ docker run --name sonerezh-db --env MYSQL_ROOT_PASSWORD=motdepasse \
+                                    --env MYSQL_USER=sonerezh \
+                                    --env MYSQL_PASSWORD=motdepasse \
+                                    --env MYSQL_DATABASE=sonerezh \
+                                    --volume /path/to/mysql/data:/var/lib/mysql \
+                                    --detach mariadb
+
+Où ``/path/to/mysql/data`` est le volume de stockage utilisé par MariaDB (optionnel).
+
+^^^^^^^^^^^^^
+L'application
+^^^^^^^^^^^^^
+
+Il ne reste plus qu'à déployer l'image de Sonerezh :
+
+.. code-block:: sh
+
+    $ docker run --name sonerezh-app --link sonerezh-db:sonerezh-db \
+                                     --volume /path/to/music:/music \
+                                     --volume /path/to/thumbnails:/thumbnails \
+                                     --detach --publish 8080:80 \
+                                     sonerezh/sonerezh:latest
+
+Où ``/path/to/music`` est le chemin sur votre hôte où est stockée votre musique. Et où ``/path/to/thumbnails`` est le chemin sur votre hôte où Sonerezh peut sauvegarder les miniatures de vos albums.
+
+L'option ``--publish 8080:80`` rend Sonerezh accessible sur le port 8080 de l'hôte (http://127.0.0.1:8080).
+
 -------------------------------------
 Installation sur un hébergement dédié
 -------------------------------------

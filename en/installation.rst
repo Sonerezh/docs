@@ -4,6 +4,47 @@ Installation
 
 No headhaches with complicated configuration files. You just have to download and uncompress the archive.
 
+------------------------
+Installation with Docker
+------------------------
+
+Sonerezh is build to perfectly work on Docker. By the way this is the safest and fastest method to install it.
+
+^^^^^^^^^^^^
+The database
+^^^^^^^^^^^^
+
+The official Sonerezh image for Docker does not provide a database. That's why you need a MariaDB container:
+
+.. code-block:: sh
+
+    $ docker run --name sonerezh-db --env MYSQL_ROOT_PASSWORD=motdepasse \
+                                    --env MYSQL_USER=sonerezh \
+                                    --env MYSQL_PASSWORD=motdepasse \
+                                    --env MYSQL_DATABASE=sonerezh \
+                                    --volume /path/to/mysql/data:/var/lib/mysql \
+                                    --detach mariadb
+
+Where ``/path/to/mysql/data`` is the volume where MariaDB stores its data (optionnal).
+
+^^^^^^^
+The app
+^^^^^^^
+
+Then you just need to run the Sonerezh's image:
+
+.. code-block:: sh
+
+    $ docker run --name sonerezh-app --link sonerezh-db:sonerezh-db \
+                                     --volume /path/to/music:/music \
+                                     --volume /path/to/thumbnails:/thumbnails \
+                                     --detach --publish 8080:80 \
+                                     sonerezh/sonerezh:lates
+
+Where ``/path/to/music`` is the absolute path on your host where Sonerezh can find your music. And where ``/path/to/thumbnails`` is the path on your host where Sonerezh can store the thumbnails.
+
+THe ``--publish 8080:80`` option make Sonerezh available on the local port 8080 (http://127.0.0.1:8080).
+
 ----------------------------------
 Installation on a dedicated server
 ----------------------------------
