@@ -18,6 +18,7 @@ Contents:
    requirements
    installation
    configuration
+   command line tool
    upgrade
    annexes
 

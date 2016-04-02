@@ -38,6 +38,39 @@ Voici un modèle fonctionnel de server-block à ajouter dans votre configuration
         }
     }
 
+Si vous souhaiter faire fonctionner Sonerezh sur un sous-dossier, comme par exemple ``www.domain.com/sonerezh``, vous pouvez vous inspirer de l'exemple ci-dessus :
+
+.. code-block:: nginx
+
+    server {
+        listen      80;
+        server_name www.domain.com/sonerezh;
+
+        index index.php;
+
+        location /sonerezh/ {
+            alias /var/www/sonerezh/app/webroot/;
+            try_files $uri $uri/ /sonerezh//sonerezh/index.php?$args;
+
+            # Serve static images from resized folder
+            location ~* \/([^\/]+_[0-9]+x[0-9]+\.[a-z]+) {
+                alias /var/www/sonerezh/app/webroot/;
+                try_files /img/resized/$1 /sonerezh/index.php?$args;
+                expires 21d;
+                access_log off;
+                add_header Cache-Control 'public';
+            }
+
+            location ~ ^/sonerezh/(.+\.php)$ {
+                alias /var/www/sonerezh/app/webroot/$1;
+                #try_files $uri =404
+                fastcgi_pass php5-fpm-sonerezh-sock;
+                fastcgi_index index.php;
+                include fastcgi.conf;
+            }
+        }
+    }
+
 De nombreux tutoriels sur Internet vous aideront à configurer Nginx avec PHP si ce n'est pas déjà fait.
 
 ----------------------------------

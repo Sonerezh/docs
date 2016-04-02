@@ -54,7 +54,7 @@ copyright = u'2015, Guillaume Leduc, Thomas Baccelli'
 # built documents.
 #
 # The short X.Y version.
-version = 'v1.0.0'
+version = 'v1.1.0'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -107,7 +107,7 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'nosidebar': False 
+    'nosidebar': False
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
