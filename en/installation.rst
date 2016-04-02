@@ -66,8 +66,8 @@ But if you prefer, you can also download a ZIP archive from GitHub.
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
-    sudo unzip 1.0.0.zip
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
+    sudo unzip 1.1.0.zip
     sudo mv sonerezh-1.0.0 sonerezh
     sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
 
@@ -87,7 +87,7 @@ That's all ! You just have to go to http://demo.sonerezh.bzh/install and fill in
 Installation on shared hosting
 ------------------------------
 
-The installation process on shared hosting is almost the same than on dedicated server. 
+The installation process on shared hosting is almost the same than on dedicated server.
 
 1) Prepare your database, depending on your hosting provider
 2) Download Sonerezh from GitHub_
@@ -100,7 +100,7 @@ The installation process on shared hosting is almost the same than on dedicated 
 ------------------------------------------
 Installation example on Ubuntu Server
 ------------------------------------------
-This is an example to install Sonerezh on Ubuntu Server 14.10 (Apache 2.4, PHP 5.5 and MySQL 14.14). In this example, 
+This is an example to install Sonerezh on Ubuntu Server 14.10 (Apache 2.4, PHP 5.5 and MySQL 14.14). In this example,
 the default installation path is ``/var/www/html/sonerezh`` and it is deployed on http://www.myserver.com/sonerezh.
 
 ^^^^^^^^^^^^^^^^^
@@ -154,7 +154,7 @@ Then add your site:
     <VirtualHost *:80>
         ServerName      www.myserver.com
         DocumentRoot    /var/www/html/sonerezh
-    
+
         <Directory /var/www/html/sonerezh>
             Options -Indexes
             AllowOverride All
@@ -162,7 +162,7 @@ Then add your site:
                 Require all granted
             </IfModule>
         </Directory>
-        
+
         CustomLog   /var/log/apache2/www.myserver.com-access.log "Combined"
         ErrorLog    /var/log/apache2/www.myserver.com-error.log
     </VirtualHost>
@@ -172,10 +172,10 @@ Save the file, enable the new virtual host and restart your web server:
 .. code-block:: sh
 
     sudo a2ensite sonerezh && sudo service apache2 restart
-    
+
 ^^^^^^^^^^^^^^^^^^
 Configure Sonerezh
 ^^^^^^^^^^^^^^^^^^
 In your browser, go to http://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
 
-.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
+.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip

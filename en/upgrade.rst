@@ -41,9 +41,9 @@ Without git
 ^^^^^^^^^^^
 You cannot upgrade Sonerezh if you do not use git. You have to install the new version from scratch.
 
--------------------
-1.0.0 to 1.1.0-beta
--------------------
+--------------
+1.0.0 to 1.1.0
+--------------
 
 ^^^^^^^^
 With git
@@ -67,6 +67,6 @@ There is not official procedure to update Sonerezh without Git. We advise you to
 
     $ cd /var/www
     /var/www $ cp -a sonerezh sonerezh.backup
-    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.0-beta.tar.gz
-    /var/www $ tar -zcf 1.1.0-beta.tar.gz
-    /var/www $ rsync -a sonerezh-1.1.0-beta sonerezh
+    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.tar.gz
+    /var/www $ tar -zcf 1.1.0.tar.gz
+    /var/www $ rsync -a sonerezh-1.1.0 sonerezh

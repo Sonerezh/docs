@@ -66,9 +66,9 @@ Installation avec Git :
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
-    sudo unzip 1.0.0.zip
-    sudo mv sonerezh-1.0.0 sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
+    sudo unzip 1.1.0.zip
+    sudo mv sonerezh-1.1.0 sonerezh
     sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +105,7 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 1) Récupérez votre copie de sonerezh `sur notre dépôt GitHub`_
 2) Déposez cette archive sur votre hébergement et décompressez-la dans ``sonerezh/``
 3) Rendez-vous sur http://demo.sonerezh.bzh/install
-4) Remplissez les champs 
+4) Remplissez les champs
 
 * Email : l'adresse email utilisée pour vous connecter, ce premier compte sera créé avec le niveau d'accès administrateur
 * Mot de passe : mot de passe de l'administrateur
@@ -118,7 +118,7 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 
 5) Validez. C'est bon ! :)
 
-.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.0.0.zip
+.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
 
 ----------------------------------------
 Exemple de déploiement sur Ubuntu Server
@@ -178,7 +178,7 @@ Et y ajouter le Virtual Host suivant :
    <VirtualHost *:80>
         ServerName      www.monserveur.com
         DocumentRoot    /var/www/html/sonerezh
-    
+
         <Directory /var/www/html/sonerezh>
             Options -Indexes
             AllowOverride All
@@ -186,7 +186,7 @@ Et y ajouter le Virtual Host suivant :
                 Require all granted
             </IfModule>
         </Directory>
-        
+
         CustomLog   /var/log/apache2/www.monserveur.com-access.log "Combined"
         ErrorLog    /var/log/apache2/www.monserveur.com-error.log
     </VirtualHost>
@@ -195,7 +195,7 @@ Enregistrer le fichier, activer le nouveau site et redémarrer Apache :
 
 .. code-block:: sh
 
-    sudo a2ensite sonerezh && sudo service apache2 restart 
+    sudo a2ensite sonerezh && sudo service apache2 restart
 
 ^^^^^^^^^^^^^^^^^^
 Installer Sonerezh

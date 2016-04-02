@@ -41,9 +41,9 @@ Sans git
 ^^^^^^^^
 Malheureusement il n'y a pas de processus de mise à jour si vous n'utilisez pas Git. Vous devez repartir sur une installation vierge.
 
----------------------
-1.0.0 vers 1.1.0-beta
----------------------
+----------------
+1.0.0 vers 1.1.0
+----------------
 
 ^^^^^^^^
 Avec git
@@ -67,6 +67,6 @@ Il n'y pas de procédure officielle pour mettre à jour Sonerezh sans Git. Nous 
 
     $ cd /var/www
     /var/www $ cp -a sonerezh sonerezh.backup
-    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.0-beta.tar.gz
-    /var/www $ tar -zcf 1.1.0-beta.tar.gz
-    /var/www $ rsync -a sonerezh-1.1.0-beta sonerezh
+    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.tar.gz
+    /var/www $ tar -zcf 1.1.0.tar.gz
+    /var/www $ rsync -a sonerezh-1.1.0 sonerezh
