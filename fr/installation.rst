@@ -59,17 +59,17 @@ Installation avec Git :
 
     cd /var/www
     sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
-    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+    sudo chown -R www-data: sonerezh/
 
     Si vous préférez télécharger une archive Zip depuis GitHub:
 
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
-    sudo unzip 1.1.0.zip
-    sudo mv sonerezh-1.1.0 sonerezh
-    sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
+    sudo unzip 1.1.1.zip
+    sudo mv sonerezh-1.1.1 sonerezh
+    sudo chown -R www-data: sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Préparation du serveur web
@@ -118,7 +118,7 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 
 5) Validez. C'est bon ! :)
 
-.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
+.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
 
 ----------------------------------------
 Exemple de déploiement sur Ubuntu Server
@@ -134,7 +134,7 @@ Comme indiqué ci-dessus, nous utilisons Git pour récupérer les sources du pro
 
     cd /var/www/html
     sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
-    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+    sudo chown -R www-data: sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Préparation de la base de données

@@ -70,3 +70,33 @@ Il n'y pas de procédure officielle pour mettre à jour Sonerezh sans Git. Nous 
     /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.tar.gz
     /var/www $ tar -zcf 1.1.0.tar.gz
     /var/www $ rsync -a sonerezh-1.1.0 sonerezh
+
+----------------
+1.1.0 vers 1.1.1
+----------------
+
+^^^^^^^^
+Avec git
+^^^^^^^^
+Récupérez la dernière version des sources :
+
+.. code-block:: sh
+
+    $ cd /var/www/sonerezh
+    /var/www/sonerezh $ git fetch
+    /var/www/sonerezh $ git checkout -b 1.1.1 tags/1.1.1
+
+Votre instance est à jour ! Vous pouvez aller le vérifier sur la page des paramètres, sous les statistiques. Penses aussi à vider le cache de votre navigateur.
+
+^^^^^^^^
+Sans git
+^^^^^^^^
+Il n'y pas de procédure officielle pour mettre à jour Sonerezh sans Git. Nous vous conseillons de repartir sur une installation neuve. Cependant, l'outil ``rsync`` devrait fonctionner :
+
+.. code-block:: sh
+
+    $ cd /var/www
+    /var/www $ cp -a sonerezh sonerezh.backup
+    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.tar.gz
+    /var/www $ tar -zcf 1.1.1.tar.gz
+    /var/www $ rsync -a sonerezh-1.1.1 sonerezh

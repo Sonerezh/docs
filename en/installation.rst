@@ -39,7 +39,7 @@ Then you just need to run the Sonerezh's image:
                                      --volume /path/to/music:/music \
                                      --volume /path/to/thumbnails:/thumbnails \
                                      --detach --publish 8080:80 \
-                                     sonerezh/sonerezh:lates
+                                     sonerezh/sonerezh:latest
 
 Where ``/path/to/music`` is the absolute path on your host where Sonerezh can find your music. And where ``/path/to/thumbnails`` is the path on your host where Sonerezh can store the thumbnails.
 
@@ -59,17 +59,17 @@ Install Sonerezh with Git:
 
     cd /var/www
     sudo git clone --branch master https://github.com/Sonerezh/sonerezh.git
-    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+    sudo chown -R www-data: sonerezh/
 
 But if you prefer, you can also download a ZIP archive from GitHub.
 
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
-    sudo unzip 1.1.0.zip
-    sudo mv sonerezh-1.0.0 sonerezh
-    sudo chown -R www-data: sonerezh && sudo chmod -R 775 sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
+    sudo unzip 1.1.1.zip
+    sudo mv sonerezh-1.1.1 sonerezh
+    sudo chown -R www-data: sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Preparing the web server
@@ -112,7 +112,7 @@ As mentioned above, it is recommended to use Git to download the sources (instal
 
     cd /var/www/html/
     sudo git clone --branch master http://github.com/Sonerezh/sonerezh.git
-    sudo chown -R www-data: sonerezh/ && sudo chmod -R 775 sonerezh/
+    sudo chown -R www-data: sonerezh/
 
 ^^^^^^^^^^^^^^^^^^^
 Create the database
@@ -178,4 +178,4 @@ Configure Sonerezh
 ^^^^^^^^^^^^^^^^^^
 In your browser, go to http://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
 
-.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.0.zip
+.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
