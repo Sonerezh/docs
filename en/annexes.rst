@@ -2,6 +2,19 @@
 Annexes
 =======
 
+---------------
+Troubleshooting
+---------------
+
+* I have "404 not found" when I try to access ``www.domain.com/sonerezh/install``
+
+Sonerezh needs the Apache rewrite modules to rewrite its urls. Please check if it is correctly loaded with ``apache2ctl -M``. If you use Nginx, be sure the ``root`` directive is set to the ``webroot`` directory.
+
+* No sound when I try to play a track
+
+If you are running Linux, be sure your browser have the proper codecs to read your files. Furthermore, Sonerezh needs cookies to work, so it is not compatible with the "privacy navigation" mode, unless you add an exception for the domain name where your Sonerezh is hosted.
+
+
 --------------------------
 Nginx server-block example
 --------------------------

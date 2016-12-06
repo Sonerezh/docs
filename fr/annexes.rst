@@ -2,6 +2,19 @@
 Annexes
 =======
 
+----------------
+FAQ / Diagnostic
+----------------
+
+* J'obtiens "404 not found" lorsque j'essaye d'accéder à ``www.domain.com/sonerezh/install``
+
+Sonerezh utilise le module rewrite d'Apache pour réécrire ses urls. Vérifiez qu'il est bien activé avec la commande ``apache2ctl -M``. Si vous utilisez Nginx, vérifiez que la directive ``root`` de votre server-block pointe bien sur le dossier ``webroot`` de Sonerezh.
+
+* Pas de son lorsque je lance une piste
+
+Si vous êtes sous Linux, assurez-vous que votre navigateur dispose des codecs adaptés au format audio des fichiers que vous souhaitez lire. De plus, Sonerezh a besoin de ses propres cookies pour fonctionner, et n'est donc pas compatible avec le mode navigation privée, à moins d'ajouter une exception sur le domaine hébergeant votre instance de Sonerezh.
+
+
 ---------------------------------
 Modèle de server-block pour Nginx
 ---------------------------------
