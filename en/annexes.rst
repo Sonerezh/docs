@@ -42,6 +42,7 @@ This is a minimalist configuration sample for Nginx. Feel free to improve it to 
             try_files $uri =404;
             fastcgi_index index.php;
             fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include /etc/nginx/fastcgi_params;
         }
     }
