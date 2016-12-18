@@ -54,7 +54,7 @@ copyright = u'2015, Guillaume Leduc, Thomas Baccelli'
 # built documents.
 #
 # The short X.Y version.
-version = 'v1.1.1'
+version = 'v1.1.3'
 # The full version, including alpha/beta/rc tags.
 release = version
 
