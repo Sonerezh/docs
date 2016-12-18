@@ -27,7 +27,7 @@ Récupérez la dernière version des sources :
     /var/www/sonerezh $ git fetch
     /var/www/sonerezh $ git checkout tags/1.0.0
 
-Le schéma de la base de données à changé, il faut donc le mettre à jour (requiert php-cli) :
+Le schéma de la base de données a changé, il faut donc le mettre à jour (requiert php-cli) :
 
 .. code-block:: sh
 
@@ -100,3 +100,57 @@ Il n'y pas de procédure officielle pour mettre à jour Sonerezh sans Git. Nous 
     /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.tar.gz
     /var/www $ tar -zcf 1.1.1.tar.gz
     /var/www $ rsync -a sonerezh-1.1.1 sonerezh
+
+----------------
+1.1.1 vers 1.1.3
+----------------
+
+^^^^^^^^
+Avec git
+^^^^^^^^
+Récupérez la dernière version des sources :
+
+.. code-block:: sh
+
+    $ cd /var/www/sonerezh
+    /var/www/sonerezh $ git fetch
+    /var/www/sonerezh $ git checkout -b 1.1.3 tags/1.1.3
+
+Le schéma de la base de données a changé, il faut donc le mettre à jour (requiert php-cli) :
+
+.. code-block:: sh
+
+    # Suivez les instructions fournies par la commande
+    # Si vous utilisez MySQL
+    app/Console/cake schema update sonerezhMysql
+
+    # Si vous utilisez PostreSQL
+    app/Console/cake schema update sonerezhPgsql
+
+Votre instance est à jour ! Vous pouvez aller le vérifier sur la page des paramètres, sous les statistiques. Pensez aussi à vider le cache de votre navigateur, et supprimer les cookies de Sonerezh.
+
+^^^^^^^^
+Sans git
+^^^^^^^^
+Il n'y pas de procédure officielle pour mettre à jour Sonerezh sans Git. Nous vous conseillons de repartir sur une installation neuve. Cependant, l'outil ``rsync`` devrait fonctionner :
+
+.. code-block:: sh
+
+    $ cd /var/www
+    /var/www $ cp -a sonerezh sonerezh.backup
+    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.3.tar.gz
+    /var/www $ tar -zcf 1.1.3.tar.gz
+    /var/www $ rsync -a sonerezh-1.1.3 sonerezh
+
+Le schéma de la base de données a changé, il faut donc le mettre à jour (requiert php-cli) :
+
+.. code-block:: sh
+
+    # Suivez les instructions fournies par la commande
+    # Si vous utilisez MySQL
+    app/Console/cake schema update sonerezhMysql
+
+    # Si vous utilisez PostreSQL
+    app/Console/cake schema update sonerezhPgsql
+
+Votre instance est à jour ! Vous pouvez aller le vérifier sur la page des paramètres, sous les statistiques. Pensez aussi à vider le cache de votre navigateur, et supprimer les cookies de Sonerezh.

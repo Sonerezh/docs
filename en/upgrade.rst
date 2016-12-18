@@ -100,3 +100,57 @@ There is not official procedure to update Sonerezh without Git. We advise you to
     /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.tar.gz
     /var/www $ tar -zcf 1.1.1.tar.gz
     /var/www $ rsync -a sonerezh-1.1.1 sonerezh
+
+--------------
+1.1.1 to 1.1.3
+--------------
+
+^^^^^^^^
+With git
+^^^^^^^^
+Get the latest version from GitHub:
+
+.. code-block:: sh
+
+    $ cd /var/www/sonerezh
+    /var/www/sonerezh $ git fetch
+    /var/www/sonerezh $ git checkout -b 1.1.3 tags/1.1.3
+
+The dabatase schema has changed, you have to update it (php-cli required):
+
+.. code-block:: sh
+
+    # Follow the instructions given by the command
+    # If you use MySQL
+    app/Console/cake schema update sonerezhMysql
+
+    # If you use PostreSQL
+    app/Console/cake schema update sonerezhPgsql
+
+You instance has been upgraded! You can verify it under the statistics, on the settings page. Do not forget to empty you browser cache and delete the Sonerezh cookies.
+
+^^^^^^^^^^^
+Without git
+^^^^^^^^^^^
+There is not official procedure to update Sonerezh without Git. We advise you to make a fresh install with the latest archive. However, ``rsync`` should make the job:
+
+.. code-block:: sh
+
+    $ cd /var/www
+    /var/www $ cp -a sonerezh sonerezh.backup
+    /var/www $ wget https://github.com/Sonerezh/sonerezh/archive/1.1.3.tar.gz
+    /var/www $ tar -zcf 1.1.3.tar.gz
+    /var/www $ rsync -a sonerezh-1.1.3 sonerezh
+
+The dabatase schema has changed, you have to update it (php-cli required):
+
+.. code-block:: sh
+
+    # Follow the instructions given by the command
+    # If you use MySQL
+    app/Console/cake schema update sonerezhMysql
+
+    # If you use PostreSQL
+    app/Console/cake schema update sonerezhPgsql
+
+You instance has been upgraded! You can verify it under the statistics, on the settings page. Do not forget to empty you browser cache and delete the Sonerezh cookies.
