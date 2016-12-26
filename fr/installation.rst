@@ -53,6 +53,21 @@ Nous vous recommandons d'utiliser ``git`` pour récupérer les sources du projet
 
 .. note:: Nous allons installer sonerezh dans ``/var/www/sonerezh``, pour pouvoir y accéder à l'adresse http://demo.sonerezh.bzh.
 
+On commence par préparer la base de données :
+
+.. code-block:: sh
+
+    mysql -u root -p
+
+.. code-block:: sql
+
+    CREATE DATABASE sonerezh;
+    GRANT ALL PRIVILEGES ON sonerezh.* TO 'sonerezh'@'localhost' IDENTIFIED BY 'votre-motdepasse';
+    FLUSH PRIVILEGES;
+    exit;
+
+.. note:: Cette étape peut aussi être réalisée via PHPMyAdmin si vous l'utilisez déjà.
+
 Installation avec Git :
 
 .. code-block:: sh
@@ -66,9 +81,9 @@ Installation avec Git :
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
-    sudo unzip 1.1.1.zip
-    sudo mv sonerezh-1.1.1 sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.3.zip
+    sudo unzip 1.1.3.zip
+    sudo mv sonerezh-1.1.3 sonerezh
     sudo chown -R www-data: sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,7 +133,7 @@ Les hébergements de type mutualisés ne vous permettent pas un accès complet. 
 
 5) Validez. C'est bon ! :)
 
-.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
+.. _sur notre dépôt GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.3.zip
 
 ----------------------------------------
 Exemple de déploiement sur Ubuntu Server

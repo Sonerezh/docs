@@ -53,6 +53,19 @@ As Sonerezh does not have auto-updater yet, we recommend you to use Git to downl
 
 .. note:: We will install Sonerezh in ``/var/www/sonerezh``, and make it reachable to http://demo.sonerezh.bzh.
 
+We begin with the MySQL database:
+
+  .. code-block:: sh
+
+      mysql -u root -p
+
+  .. code-block:: sql
+
+      CREATE DATABASE sonerezh;
+      GRANT ALL PRIVILEGES ON sonerezh.* TO 'sonerezh'@'localhost' IDENTIFIED BY 'the-password';
+      FLUSH PRIVILEGES;
+      exit;
+
 Install Sonerezh with Git:
 
 .. code-block:: sh
@@ -66,9 +79,9 @@ But if you prefer, you can also download a ZIP archive from GitHub.
 .. code-block:: sh
 
     cd /var/www
-    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
-    sudo unzip 1.1.1.zip
-    sudo mv sonerezh-1.1.1 sonerezh
+    sudo wget https://github.com/Sonerezh/sonerezh/archive/1.1.3.zip
+    sudo unzip 1.1.3.zip
+    sudo mv sonerezh-1.1.3 sonerezh
     sudo chown -R www-data: sonerezh
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -178,4 +191,4 @@ Configure Sonerezh
 ^^^^^^^^^^^^^^^^^^
 In your browser, go to http://www.myserver.com/sonerezh and fill in the form with your parameters. Enjoy your music!
 
-.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.1.zip
+.. _GitHub: https://github.com/Sonerezh/sonerezh/archive/1.1.3.zip
