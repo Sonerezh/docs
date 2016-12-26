@@ -15,6 +15,12 @@ Sonerezh needs the Apache rewrite modules to rewrite its urls. Please check if i
 If you are running Linux, be sure your browser have the proper codecs to read your files. Furthermore, Sonerezh needs cookies to work, so it is not compatible with the "privacy navigation" mode, unless you add an exception for the domain name where your Sonerezh is hosted.
 
 
+------------
+Known issues
+------------
+
+* Sonerezh is not fully compatible with the *Private browsing* mode of your browser (seel also: `#152 <https://github.com/Sonerezh/sonerezh/issues/152>`_).
+
 --------------------------
 Nginx server-block example
 --------------------------

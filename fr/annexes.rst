@@ -14,6 +14,11 @@ Sonerezh utilise le module rewrite d'Apache pour réécrire ses urls. Vérifiez 
 
 Si vous êtes sous Linux, assurez-vous que votre navigateur dispose des codecs adaptés au format audio des fichiers que vous souhaitez lire. De plus, Sonerezh a besoin de ses propres cookies pour fonctionner, et n'est donc pas compatible avec le mode navigation privée, à moins d'ajouter une exception sur le domaine hébergeant votre instance de Sonerezh.
 
+----------------
+Problèmes connus
+----------------
+
+* Sonerezh n'est pas compatible avec le mode *Navigation privée* de votre navigateur (voir aussi: `#152 <https://github.com/Sonerezh/sonerezh/issues/152>`_).
 
 ---------------------------------
 Modèle de server-block pour Nginx
