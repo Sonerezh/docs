@@ -26,7 +26,7 @@ Modèle de server-block pour Nginx
 
 Voici un modèle fonctionnel de server-block à ajouter dans votre configuration Nginx. Celui-ci n'est évidemment pas exhaustif et ne propose que le minimum de fonctionnalités (pas de HTTPS par exemple).
 
-.. note:: Le modèle ci-dessous a été testé avec Nginx 1.6.2, sous Debian 7.8. Il permet d'avoir une instance de Sonerezh accessible à l'adresse http://demo.sonerezh.bzh.
+.. note:: Le modèle ci-dessous a été testé avec Nginx 1.9.10, sous Debian 8.6. Il permet d'avoir une instance de Sonerezh accessible à l'adresse http://demo.sonerezh.bzh.
 
 .. code-block:: nginx
 
@@ -41,19 +41,24 @@ Voici un modèle fonctionnel de server-block à ajouter dans votre configuration
             try_files $uri $uri/ /index.php?$args;
         }
 
-        # Serve static images from resized folder
-        location ~* \/([^\/]+_[0-9]+x[0-9]+\.[a-z]+) {
+        # Le bloc suivant permet de gérer la mise en cache des miniatures
+        # et des pochettes d'album côté client (optionnel mais recommandé)
+        location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$
             try_files /img/resized/$1 /index.php?$args;
-            expires 14d;
             add_header Cache-Control 'public';
+            expires 14d;
+            access_log off;
         }
 
         location ~ \.php$ {
             try_files $uri =404;
             fastcgi_index index.php;
             fastcgi_pass unix:/var/run/php5-fpm.sock;
-            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            include /etc/nginx/fastcgi_params;
+            include fastcgi.conf;
+
+            # Si fastcgi.conf n'est pas disponible sur votre plateforme vous
+            # pouvez décommenter la ligne suivante
+            #fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         }
     }
 
@@ -71,21 +76,24 @@ Si vous souhaiter faire fonctionner Sonerezh sur un sous-dossier, comme par exem
             alias /var/www/sonerezh/app/webroot/;
             try_files $uri $uri/ /sonerezh//sonerezh/index.php?$args;
 
-            # Serve static images from resized folder
-            location ~* \/([^\/]+_[0-9]+x[0-9]+\.[a-z]+) {
+            # Le bloc suivant permet de gérer la mise en cache des miniatures
+            # et des pochettes d'album côté client (optionnel mais recommandé)
+            location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$
                 alias /var/www/sonerezh/app/webroot/;
                 try_files /img/resized/$1 /sonerezh/index.php?$args;
-                expires 21d;
-                access_log off;
                 add_header Cache-Control 'public';
+                expires 14d;
+                access_log off;
             }
 
             location ~ ^/sonerezh/(.+\.php)$ {
                 alias /var/www/sonerezh/app/webroot/$1;
-                #try_files $uri =404
-                fastcgi_pass php5-fpm-sonerezh-sock;
-                fastcgi_index index.php;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
                 include fastcgi.conf;
+
+                # Si fastcgi.conf n'est pas disponible sur votre plateforme vous
+                # pouvez décommenter la ligne suivante
+                #fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             }
         }
     }

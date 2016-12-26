@@ -27,7 +27,7 @@ Nginx server-block example
 
 This is a minimalist configuration sample for Nginx. Feel free to improve it to fit your needs.
 
-.. note:: This example has been tested with Nginx 1.6.2, under Debian 7.8.
+.. note:: The example below has been tested with Nginx 1.9.10, under Debian 8.6.
 
 .. code-block:: nginx
 
@@ -44,12 +44,24 @@ This is a minimalist configuration sample for Nginx. Feel free to improve it to 
             add_header Cache-Control 'public';
         }
 
+        # The section below handle the thumbnails cache, on the client (browser)
+        # side (optionnal but recommended)
+        location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$
+            try_files /img/resized/$1 /index.php?$args;
+            add_header Cache-Control 'public';
+            expires 14d;
+            access_log off;
+        }
+
         location ~ \.php$ {
             try_files $uri =404;
             fastcgi_index index.php;
             fastcgi_pass unix:/var/run/php5-fpm.sock;
-            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            include /etc/nginx/fastcgi_params;
+            include fastcgi.conf;
+
+            # If fastcgi.conf is not available on your platform you may want to
+            # uncomment the following line
+            #fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         }
     }
 
@@ -67,21 +79,23 @@ If you want to run Sonerezh on a subfolder, like ``www.domain.com/sonerezh``, yo
             alias /var/www/sonerezh/app/webroot/;
             try_files $uri $uri/ /sonerezh//sonerezh/index.php?$args;
 
-            # Serve static images from resized folder
-            location ~* \/([^\/]+_[0-9]+x[0-9]+\.[a-z]+) {
-                alias /var/www/sonerezh/app/webroot/;
-                try_files /img/resized/$1 /sonerezh/index.php?$args;
-                expires 21d;
-                access_log off;
+            # The section below handle the thumbnails cache, on the client (browser)
+            # side (optionnal but recommended)
+            location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$
+                try_files /img/resized/$1 /index.php?$args;
                 add_header Cache-Control 'public';
+                expires 14d;
+                access_log off;
             }
 
             location ~ ^/sonerezh/(.+\.php)$ {
                 alias /var/www/sonerezh/app/webroot/$1;
-                #try_files $uri =404
-                fastcgi_pass php5-fpm-sonerezh-sock;
-                fastcgi_index index.php;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
                 include fastcgi.conf;
+
+                # If fastcgi.conf is not available on your platform you may want to
+                # uncomment the following line
+                #fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             }
         }
     }
