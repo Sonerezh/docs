@@ -88,7 +88,7 @@ But if you prefer, you can also download a ZIP archive from GitHub.
 Preparing the web server
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Several configuration samples are available in the :doc:`annexes`
+Several configuration samples are available in the :doc:`appendix`
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Deploying the application

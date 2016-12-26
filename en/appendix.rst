@@ -1,6 +1,6 @@
-=======
-Annexes
-=======
+========
+Appendix
+========
 
 ---------------
 Troubleshooting
