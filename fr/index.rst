@@ -20,7 +20,7 @@ Contents:
    configuration
    command line tool
    upgrade
-   annexes
+   appendix
 
 La roadmap du projet est disponible à cette adresse : `roadmap.sonerezh.bzh <https://roadmap.sonerezh.bzh/b/eCuz4jyhwjmxpxX8C/sonerezh-roadmap>`_
 

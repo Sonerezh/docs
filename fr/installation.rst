@@ -90,7 +90,7 @@ Installation avec Git :
 Préparation du serveur web
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Des modèles de configuration pour Nginx et Apache sont disponibles en :doc:`annexes`.
+Des modèles de configuration pour Nginx et Apache sont disponibles en :doc:`appendix`.
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Déploiement de l'application

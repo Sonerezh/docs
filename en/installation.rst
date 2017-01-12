@@ -25,7 +25,7 @@ The official Sonerezh image for Docker does not provide a database. That's why y
                                     --volume /path/to/mysql/data:/var/lib/mysql \
                                     --detach mariadb
 
-Where ``/path/to/mysql/data`` is the volume where MariaDB stores its data (optionnal).
+Where ``/path/to/mysql/data`` is the volume where MariaDB stores its data (optional).
 
 ^^^^^^^
 The app
@@ -43,7 +43,7 @@ Then you just need to run the Sonerezh's image:
 
 Where ``/path/to/music`` is the absolute path on your host where Sonerezh can find your music. And where ``/path/to/thumbnails`` is the path on your host where Sonerezh can store the thumbnails.
 
-THe ``--publish 8080:80`` option make Sonerezh available on the local port 8080 (http://127.0.0.1:8080).
+The ``--publish 8080:80`` option make Sonerezh available on the local port 8080 (http://127.0.0.1:8080).
 
 ----------------------------------
 Installation on a dedicated server
@@ -88,7 +88,7 @@ But if you prefer, you can also download a ZIP archive from GitHub.
 Preparing the web server
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Several configuration samples are available in the :doc:`annexes`
+Several configuration samples are available in the :doc:`appendix`
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Deploying the application
