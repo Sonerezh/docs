@@ -43,7 +43,7 @@ Voici un modèle fonctionnel de server-block à ajouter dans votre configuration
 
         # Le bloc suivant permet de gérer la mise en cache des miniatures
         # et des pochettes d'album côté client (optionnel mais recommandé)
-        location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$
+        location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$ {
             try_files /img/resized/$1 /index.php?$args;
             add_header Cache-Control 'public';
             expires 14d;
@@ -78,7 +78,7 @@ Si vous souhaiter faire fonctionner Sonerezh sur un sous-dossier, comme par exem
 
             # Le bloc suivant permet de gérer la mise en cache des miniatures
             # et des pochettes d'album côté client (optionnel mais recommandé)
-            location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$
+            location ~* /([^/]+_[0-9]+x[0-9]+(@[0-9]+x)?\.[a-z]+)$ {
                 alias /var/www/sonerezh/app/webroot/;
                 try_files /img/resized/$1 /sonerezh/index.php?$args;
                 add_header Cache-Control 'public';
