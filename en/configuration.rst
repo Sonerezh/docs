@@ -32,7 +32,7 @@ You can follow the `official CakePHP documentation <http://book.cakephp.org/2.0/
         );
     } 
 
-In thhis example, Sonerezh will send email using the PHP function ``mail()``.
+In this example, Sonerezh will send email using the PHP function ``mail()``.
 
 ---------------------------
 Automatic tracks conversion
